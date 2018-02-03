@@ -1,0 +1,55 @@
+<!--<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        Aplicação
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content padding >
+    <form [formGroup]="cadastro" (ngSubmit)="postDados()">
+      <ion-list>
+        <ion-item >
+          <ion-label floating>
+            Digite o número do seu celular
+          </ion-label>
+          <ion-input type="text" name="Celular" formControlName="celular" [brmasker]="{mask:'(00) 00000-0000', len:15}" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <button [disabled]="cadastro.invalid" id="botao" ion-button full color="positive">
+            Confirmar
+          </button>
+        </ion-item>
+      </ion-list>
+    </form>-->
+
+
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Aplicação
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page1">
+  <form id="home-form3" name="form3">
+    <ion-list>
+      <ion-item id="home-input1">
+        <ion-label floating>
+          Digite o número do seu celular
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="cel" id="celular" name="Celular" [brmasker]="{phone: true}" required="required"></ion-input>
+      </ion-item>
+      <ion-item>
+        <button id="home-button1" id="botao" ion-button color="positive" block (click)="checar()">
+          Confirmar
+        </button>
+      </ion-item>
+    </ion-list>
+  </form>
